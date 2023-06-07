@@ -14,7 +14,7 @@ env:
 
 defaults: 
   run: 
-    working-directory: "./aspnet-core/"
+    working-directory: "./reactjs/"
 
 jobs:
   build:
