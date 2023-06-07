@@ -24,7 +24,8 @@ module.exports = {
 
       webpackConfig.plugins.push(
         process.env.NODE_ENV === 'production'
-          ? new CopyWebpackPlugin([
+          ? new CopyWebpackPlugin({ patterns: 
+            [
               {
                 from: 'node_modules/@aspnet/signalr/dist/browser/signalr.min.js',
               },
@@ -34,8 +35,10 @@ module.exports = {
               {
                 from: 'src/lib/abp.js',
               },
-            ])
-          : new CopyWebpackPlugin([
+            ]
+          })
+          : new CopyWebpackPlugin({patterns:
+            [
               {
                 from: 'node_modules/@aspnet/signalr/dist/browser/signalr.min.js',
               },
@@ -46,7 +49,7 @@ module.exports = {
               {
                 from: 'src/lib/abp.js',
               },
-            ])
+            ]})
       );
 
       return webpackConfig;
