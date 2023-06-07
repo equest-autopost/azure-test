@@ -9,6 +9,9 @@ on:
       - main
   workflow_dispatch:
 
+env:
+    CI: false
+
 defaults: 
   run: 
     working-directory: "./reactjs/"
