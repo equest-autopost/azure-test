@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: .
+          path: ./reactjs/
 
   deploy:
     runs-on: ubuntu-latest
@@ -59,4 +59,4 @@ jobs:
           app-name: 'azuretestfe'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_598F5570CA994B34872AA13F056A1BE9 }}
-          package: .
+          package: ./reactjs/
