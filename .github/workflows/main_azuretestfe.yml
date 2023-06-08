@@ -59,4 +59,4 @@ jobs:
           app-name: 'azuretestfe'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_598F5570CA994B34872AA13F056A1BE9 }}
-          package: ./reactjs/
+          package: . 
