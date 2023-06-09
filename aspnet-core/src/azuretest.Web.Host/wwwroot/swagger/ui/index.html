@@ -68,10 +68,10 @@
 
     <script src="swagger-ui-bundle.js"></script>
     <script src="swagger-ui-standalone-preset.js"></script>
-    <script src="ui/abp.js"></script>
-    <script src="ui/abp.swagger.js"></script>
+    <script src="abp.js"></script>
+    <script src="abp.swagger.js"></script>
 
-    <script src="abp.js">
+    <script src="abp.js" src = "abp.swagger.js">
         abp = "abp.js"
         window.onload = function () {
             var authToken = abp.auth.getToken();
