@@ -73,7 +73,7 @@
 
     <script>
         window.onload = function () {
-            var abp = abp.js;
+            var abp = abp;
             var authToken = abp.auth.getToken();
             if (authToken) {
                 fetch("/AntiForgery/SetCookie",
