@@ -71,7 +71,8 @@
     <script src="ui/abp.js"></script>
     <script src="ui/abp.swagger.js"></script>
 
-    <script>
+    <script src="ui/abp.js">
+        abp = "ui/abp.js"
         window.onload = function () {
             var authToken = abp.auth.getToken();
             if (authToken) {
