@@ -11,8 +11,12 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
+      "launchUrl":"swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "JWT_SECRET":"Test",
+        "JWT_ISSUER":"azuretestbe",
+        "CLIENT_ID":"testclient"
       }
     },
     "azuretest.Web.Host": {
