@@ -120,7 +120,7 @@ namespace azuretest.Web.Host.Startup
                 // specifying the Swagger JSON endpoint.
                 options.SwaggerEndpoint($"/swagger/{_apiVersion}/swagger.json", $"azuretest API {_apiVersion}");
                 options.IndexStream = () => Assembly.GetExecutingAssembly()
-                    .GetManifestResourceStream("azuretest.Web.Host.wwwroot.swagger.ui.index.html");
+                    .GetManifestResourceStream("azuretestbe.index.html");
                 options.DisplayRequestDuration(); // Controls the display of the request duration (in milliseconds) for "Try it out" requests.  
             }); // URL: /swagger
         }
