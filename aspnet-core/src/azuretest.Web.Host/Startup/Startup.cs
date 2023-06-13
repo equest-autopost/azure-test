@@ -94,7 +94,7 @@ namespace azuretest.Web.Host.Startup
         {
             app.UseAbp(options => { options.UseAbpRequestLocalization = false; }); // Initializes ABP framework.
 
-            //app.UseCors(_defaultCorsPolicyName); // Enable CORS!
+            app.UseCors(); // Enable CORS!
 
             app.UseStaticFiles();
 
