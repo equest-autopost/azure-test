@@ -60,17 +60,17 @@ namespace azuretest.Web.Host.Startup
             services.AddCors(
                 options => options.AddPolicy(
                     _defaultCorsPolicyName,
-                    builder => builder
-                        .WithOrigins(
-                            // App:CorsOrigins in appsettings.json can contain more than one address separated by comma.
-                            _appConfiguration["App:CorsOrigins"]
-                                .Split(",", StringSplitOptions.RemoveEmptyEntries)
-                                .Select(o => o.RemovePostFix("/"))
-                                .ToArray()
-                        )
-                        .AllowAnyHeader()
-                        .AllowAnyMethod()
-                        .AllowCredentials()
+                    builder => builder.WithOrigins("*").AllowAnyHeader().AllowCredentials()
+                        // .WithOrigins(
+                        //     // App:CorsOrigins in appsettings.json can contain more than one address separated by comma.
+                        //     _appConfiguration["App:CorsOrigins"]
+                        //         .Split(",", StringSplitOptions.RemoveEmptyEntries)
+                        //         .Select(o => o.RemovePostFix("/"))
+                        //         .ToArray()
+                        // )
+                        // .AllowAnyHeader()
+                        // .AllowAnyMethod()
+                        // .AllowCredentials()
                 )
             );
 
