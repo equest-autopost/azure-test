@@ -60,17 +60,17 @@ namespace azuretest.Web.Host.Startup
             services.AddCors(
                 options => options.AddPolicy(
                     _defaultCorsPolicyName,
-                    builder => builder.
-                         WithOrigins(
-                             // App:CorsOrigins in appsettings.json can contain more than one address separated by comma.
-                             _appConfiguration["App:CorsOrigins"]
-                                 .Split(",", StringSplitOptions.RemoveEmptyEntries)
-                                 .Select(o => o.RemovePostFix("/"))
-                                 .ToArray()
-                         )
-                         .AllowAnyHeader()
-                         .AllowAnyMethod()
-                         .AllowCredentials()
+                    builder => builder
+                        .WithOrigins(
+                            // App:CorsOrigins in appsettings.json can contain more than one address separated by comma.
+                            _appConfiguration["App:CorsOrigins"]
+                                .Split(",", StringSplitOptions.RemoveEmptyEntries)
+                                .Select(o => o.RemovePostFix("/"))
+                                .ToArray()
+                        )
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowCredentials()
                 )
             );
 
@@ -120,7 +120,7 @@ namespace azuretest.Web.Host.Startup
                 // specifying the Swagger JSON endpoint.
                 options.SwaggerEndpoint($"/swagger/{_apiVersion}/swagger.json", $"azuretest API {_apiVersion}");
                 options.IndexStream = () => Assembly.GetExecutingAssembly()
-                    .GetManifestResourceStream("azuretestbe.index.html");
+                    .GetManifestResourceStream("azuretest.Web.Host.wwwroot.swagger.ui.index.html");
                 options.DisplayRequestDuration(); // Controls the display of the request duration (in milliseconds) for "Try it out" requests.  
             }); // URL: /swagger
         }
