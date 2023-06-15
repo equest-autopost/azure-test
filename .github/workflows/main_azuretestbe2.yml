@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 env:
-      WORKING_DIRECTORY: aspnet-core\src\azuretest.Web.Host
+      WORKING_DIRECTORY: aspnet-core\
 
 jobs:
   build:
