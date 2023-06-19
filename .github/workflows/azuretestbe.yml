@@ -6,7 +6,7 @@ on:
 env:
   AZURE_WEBAPP_NAME: azuretestbe
   AZURE_WEBAPP_PACKAGE_PATH: src\azuretest.Web.Host\published
-  CONFIGURATION: Release
+  CONFIGURATION: Debug
   DOTNET_CORE_VERSION: 7.0.x
   WORKING_DIRECTORY: .\aspnet-core\src\azuretest.Web.Host
 jobs:
